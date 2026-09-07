@@ -1,8 +1,16 @@
-﻿class Goods:
-    title = "Мороженое"
-    weight = 154
-    tp = "Еда"
-    price = 1024
+﻿class Cat:
+    def __init__(self, breed, name, age):
+        self.breed = breed
+        self.name = name
+        self.age = age
 
-Goods.price = 2048
-Goods.inflation = 100
+    def draw(self):
+        print(f"На экране рисуется кот {self.name}, порода {self.breed}")
+
+cat1 = Cat("Британская", "Мурзик", 3)
+cat2 = Cat("Сиамская", "Саймон", 2)
+cat3 = Cat("Дворовая", "Барсик", 5)
+
+cat1.draw()
+cat2.draw()
+cat3.draw()

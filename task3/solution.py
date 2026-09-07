@@ -1,8 +1,18 @@
 ﻿class Car:
-    pass
+    def __init__(self):
+        self._engine_temperature = 20
 
-setattr(Car, 'model', 'Тойота')
-setattr(Car, 'color', 'Розовый')
-setattr(Car, 'number', 'П111УУ77')
+    def start_engine(self):
+        self._engine_temperature = 90
+        print("Двигатель прогрет")
 
-print(Car.__dict__['color'])
+    def drive(self):
+        if self._engine_temperature >= 90:
+            print("Поехали!")
+        else:
+            print("Сначала прогрейте двигатель!")
+
+my_car = Car()
+my_car.drive()
+my_car.start_engine()
+my_car.drive()
